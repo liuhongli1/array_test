@@ -40,8 +40,8 @@ int main(int argc,char **argv){
     MPI_Comm_split(MPI_COMM_WORLD, color, world_rank, &row_comm);
 
     int row_rank, row_size;
-    MPI_Comm_rank(MPI_COMM_WORLD, &world_rank);
-    MPI_Comm_size(MPI_COMM_WORLD, &world_size);
+    MPI_Comm_rank(MPI_COMM_WORLD, &row_rank);
+    MPI_Comm_size(MPI_COMM_WORLD, &row_size);
 
     sum();
 
@@ -67,6 +67,6 @@ int main(int argc,char **argv){
         }
     }
 
-    Mpi_Finalize();
+    MPI_Finalize();
     
 }
